@@ -2,7 +2,7 @@
 
 import { ThumbsUp, ThumbsDown, Share, Download, MoreHorizontal } from "lucide-react";
 import { mockVideos } from "@/data/mockVideos";
-import VideoCard from "@/components/VideoCard";
+import Image from "next/image";
 
 export default function WatchPage() {
   // In a real app, you'd get this from URL params
@@ -32,9 +32,11 @@ export default function WatchPage() {
           
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <img
+              <Image
                 src={video.channelAvatar}
                 alt={video.channel}
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-full"
               />
               <div>
@@ -81,12 +83,12 @@ export default function WatchPage() {
               <span>2 days ago</span>
             </div>
             <p className="text-sm">
-              In this comprehensive tutorial, we'll build a modern web application using Next.js 14. 
-              You'll learn about the new App Router, Server Components, and how to integrate with modern tools.
+              In this comprehensive tutorial, we&apos;ll build a modern web application using Next.js 14. 
+              You&apos;ll learn about the new App Router, Server Components, and how to integrate with modern tools.
               
               <br /><br />
               
-              📚 What you'll learn:
+              📚 What you&apos;ll learn:
               <br />
               • Next.js 14 App Router
               <br />
@@ -183,9 +185,11 @@ export default function WatchPage() {
           {suggestedVideos.map((suggestedVideo) => (
             <div key={suggestedVideo.id} className="flex space-x-3 cursor-pointer hover:bg-gray-50 rounded-lg p-2">
               <div className="relative flex-shrink-0">
-                <img
+                <Image
                   src={suggestedVideo.thumbnail}
                   alt={suggestedVideo.title}
+                  width={160}
+                  height={96}
                   className="w-40 h-24 object-cover rounded"
                 />
                 <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 rounded">

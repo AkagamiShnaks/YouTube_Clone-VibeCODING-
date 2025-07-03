@@ -1,6 +1,7 @@
 import { formatDistanceToNow } from "date-fns";
 import { MoreVertical } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface VideoCardProps {
   video: {
@@ -29,9 +30,11 @@ export default function VideoCard({ video }: VideoCardProps) {
   return (
     <Link href={`/watch?v=${video.id}`} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer block">
       <div className="relative">
-        <img
+        <Image
           src={video.thumbnail}
           alt={video.title}
+          width={320}
+          height={192}
           className="w-full h-48 object-cover"
         />
         <div className="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
@@ -41,9 +44,11 @@ export default function VideoCard({ video }: VideoCardProps) {
       
       <div className="p-3">
         <div className="flex space-x-3">
-          <img
+          <Image
             src={video.channelAvatar}
             alt={video.channel}
+            width={40}
+            height={40}
             className="w-10 h-10 rounded-full flex-shrink-0"
           />
           <div className="flex-1 min-w-0">

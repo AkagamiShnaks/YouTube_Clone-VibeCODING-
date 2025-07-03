@@ -7,7 +7,6 @@ import {
   Clock, 
   ThumbsUp, 
   Download, 
-  User,
   Music,
   GamepadIcon,
   Newspaper,
