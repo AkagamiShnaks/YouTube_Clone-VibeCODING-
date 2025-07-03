@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YouTube Clone - Next.js 14
+
+A modern YouTube clone built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
+- 🎨 **Modern UI** - Clean and intuitive interface similar to YouTube
+- 🎥 **Video Grid** - Display videos in a responsive grid layout
+- 📂 **Category Filtering** - Filter videos by categories
+- 👤 **Sidebar Navigation** - Complete sidebar with navigation options
+- 🔍 **Search Functionality** - Search bar in the navigation
+- 🎬 **Video Player Page** - Dedicated page for watching videos
+- 💬 **Comments Section** - Interactive comments with likes/dislikes
+- 📱 **Subscription Management** - Subscribe to channels
+- 🎯 **Video Recommendations** - Suggested videos sidebar
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Date Handling**: date-fns
+- **Development**: ESLint, PostCSS
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser** and visit [http://localhost:3000](http://localhost:3000)
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with navbar and sidebar
+│   ├── page.tsx            # Homepage with video grid
+│   ├── watch/
+│   │   └── page.tsx        # Video player page
+│   └── globals.css         # Global styles
+├── components/
+│   ├── Navbar.tsx          # Top navigation bar
+│   ├── Sidebar.tsx         # Left sidebar navigation
+│   ├── VideoCard.tsx       # Individual video card component
+│   ├── VideoGrid.tsx       # Grid layout for videos
+│   └── CategoryTabs.tsx    # Category filter tabs
+└── data/
+    └── mockVideos.ts       # Mock video data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
 
-## Learn More
+- **Homepage (/)** - Video grid with category filters
+- **Watch Page (/watch)** - Video player with comments and suggestions
 
-To learn more about Next.js, take a look at the following resources:
+## Components Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Navbar
+- YouTube logo and branding
+- Search functionality
+- User actions (upload, notifications, profile)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Sidebar
+- Home, Explore, Subscriptions navigation
+- Library section (your videos, watch later, liked videos)
+- Explore categories (Music, Gaming, News, etc.)
+- Subscriptions list
+- Settings and help
 
-## Deploy on Vercel
+### VideoCard
+- Video thumbnail with duration overlay
+- Video title, channel name, and avatar
+- View count and upload date
+- More options menu
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding New Videos
+Edit `src/data/mockVideos.ts` to add or modify video data.
+
+### Styling
+The project uses Tailwind CSS. Modify classes in components or extend the theme in `tailwind.config.js`.
+
+## Features to Add
+
+- [ ] User authentication
+- [ ] Real video upload and streaming
+- [ ] Search functionality
+- [ ] Video playback with controls
+- [ ] Channel pages
+- [ ] Playlist creation
+- [ ] Real-time comments
+- [ ] Video recommendations algorithm
+- [ ] Dark mode
+
+## License
+
+This project is for educational purposes. YouTube is a trademark of Google LLC.
