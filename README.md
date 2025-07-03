@@ -1,6 +1,10 @@
-# YouTube Clone - Next.js 14
+# YouTube Clone - Next.js 14 🚀
 
 A modern YouTube clone built with Next.js 14, TypeScript, and Tailwind CSS.
+
+**🌟 Live Demo**: Deployed on Vercel - [View Live Site](https://github.com/AkagamiShnaks/YouTube_Clone-VibeCODING-)
+
+**📅 Last Updated**: January 3, 2025 | **🔧 Status**: Production Ready
 
 ## Features
 
